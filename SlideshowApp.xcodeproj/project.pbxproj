@@ -12,6 +12,9 @@
 		2583180B22C84F0D00C12910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2583180922C84F0D00C12910 /* Main.storyboard */; };
 		2583180D22C84F0E00C12910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2583180C22C84F0E00C12910 /* Assets.xcassets */; };
 		2583181022C84F0E00C12910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2583180E22C84F0E00C12910 /* LaunchScreen.storyboard */; };
+		2583181A22C8519400C12910 /* image3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2583181722C8519300C12910 /* image3.jpeg */; };
+		2583181B22C8519400C12910 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2583181822C8519400C12910 /* image2.jpg */; };
+		2583181C22C8519400C12910 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2583181922C8519400C12910 /* image1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		2583180C22C84F0E00C12910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2583180F22C84F0E00C12910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2583181122C84F0E00C12910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2583181722C8519300C12910 /* image3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpeg; sourceTree = "<group>"; };
+		2583181822C8519400C12910 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		2583181922C8519400C12910 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		2583180422C84F0D00C12910 /* SlideshowApp */ = {
 			isa = PBXGroup;
 			children = (
+				2583181922C8519400C12910 /* image1.jpeg */,
+				2583181822C8519400C12910 /* image2.jpg */,
+				2583181722C8519300C12910 /* image3.jpeg */,
 				2583180522C84F0D00C12910 /* AppDelegate.swift */,
 				2583180722C84F0D00C12910 /* ViewController.swift */,
 				2583180922C84F0D00C12910 /* Main.storyboard */,
@@ -125,6 +134,9 @@
 				2583181022C84F0E00C12910 /* LaunchScreen.storyboard in Resources */,
 				2583180D22C84F0E00C12910 /* Assets.xcassets in Resources */,
 				2583180B22C84F0D00C12910 /* Main.storyboard in Resources */,
+				2583181A22C8519400C12910 /* image3.jpeg in Resources */,
+				2583181B22C8519400C12910 /* image2.jpg in Resources */,
+				2583181C22C8519400C12910 /* image1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
