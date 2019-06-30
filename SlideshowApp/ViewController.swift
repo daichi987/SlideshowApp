@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     var currentShow: Int = 0
     let images = [UIImage(named: "image1.jpeg"), UIImage(named: "image2.jpg"), UIImage(named: "image3.jpeg")]
 
+    var timer: Timer!
+    var timer_sec: Int = 0
+    @IBOutlet weak var backImageEnabled: UIButton!
+    @IBOutlet weak var proceedImageEnabled: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,6 +44,21 @@ class ViewController: UIViewController {
         } else {
             currentShow += 1
             imageView.image = images[currentShow]
+        }
+    }
+    
+    @IBAction func autoShow(_ sender: UIButton) {
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(proceedImage(_:)), userInfo: nil, repeats: true)
+            sender.setTitle("停止", for: .normal)
+            backImageEnabled.isEnabled = false
+            proceedImageEnabled.isEnabled = false
+        } else {
+            self.timer.invalidate()
+            self.timer = nil
+            sender.setTitle("再生", for: .normal)
+            backImageEnabled.isEnabled = true
+            proceedImageEnabled.isEnabled = true
         }
     }
 }
