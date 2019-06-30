@@ -19,6 +19,22 @@ class ViewController: UIViewController {
     var timer_sec: Int = 0
     @IBOutlet weak var backImageEnabled: UIButton!
     @IBOutlet weak var proceedImageEnabled: UIButton!
+    @IBOutlet weak var autoShow: UIButton!
+    
+    @IBAction func onTapImage(_ sender: Any) {
+        if self.timer != nil {
+            self.autoShow(autoShow)
+        }
+        performSegue(withIdentifier: "imageExpansion", sender:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let imageExpansionViewController:ImageExpansionViewController = segue.destination as! ImageExpansionViewController
+        imageExpansionViewController.imageNum = currentShow
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

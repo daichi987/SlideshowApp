@@ -42,22 +42,66 @@
                                     <action selector="autoShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5c-7J-Esh"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZ6-6i-9xD">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZ6-6i-9xD">
                                 <rect key="frame" x="87" y="172" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nme-zH-9IU" appends="YES" id="DVR-21-nKY"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="autoShow" destination="cO9-H9-aXn" id="xc0-nN-hrW"/>
                         <outlet property="backImageEnabled" destination="IwP-0d-xk2" id="KwB-tu-GVJ"/>
                         <outlet property="imageView" destination="JZ6-6i-9xD" id="3PY-od-CDj"/>
                         <outlet property="proceedImageEnabled" destination="7p6-2I-cGh" id="JS7-JU-m2a"/>
+                        <segue destination="Dip-Vy-lof" kind="show" identifier="imageExpansion" id="cQf-n7-eK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nme-zH-9IU">
+                    <connections>
+                        <action selector="onTapImage:" destination="BYZ-38-t0r" id="bec-pm-7qr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+        </scene>
+        <!--Image Expansion View Controller-->
+        <scene sceneID="ml0-m4-2kG">
+            <objects>
+                <viewController id="Dip-Vy-lof" customClass="ImageExpansionViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H13-e8-0bA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qS0-R4-cw8">
+                                <rect key="frame" x="0.0" y="106" width="414" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtc-38-5D0">
+                                <rect key="frame" x="192" y="456" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="JRq-Ag-LXy" kind="unwind" unwindAction="unwind:" id="o94-ig-3zg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Mwd-PP-p7z"/>
+                    </view>
+                    <connections>
+                        <outlet property="showImage" destination="qS0-R4-cw8" id="hbK-bE-pMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLZ-tl-2qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JRq-Ag-LXy" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="19"/>
         </scene>
     </scenes>
 </document>
